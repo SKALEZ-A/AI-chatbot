@@ -1,6 +1,7 @@
 "use client";
 import { headers } from "next/dist/client/components/headers";
 import { useState } from "react";
+// import skalez_logo from "../../skalez_logo.png";
 
 export default function Home() {
 	const [theInput, setTheInput] = useState("");
@@ -45,10 +46,13 @@ export default function Home() {
 	};
 
 	return (
-		<main className="flex min-h-screen flex-col items-center justify-between px-24 py-5">
-			<h1 className="text-5xl font-sans">SkalezChatBox</h1>
+		<main className="flex min-h-screen flex-col items-center justify-between px-24 py-5 bg-background">
+			<div>
+				{/* <img src={skalez_logo} alt="logo" className="w-32 cursor-pointer" /> */}
+				<h1 className="text-5xl font-sans">SkalezChatBot</h1>
+			</div>
 
-			<div className="flex  h-[35rem] w-[40rem] flex-col items-center bg-gray-600 rounded-xl">
+			<div className="flex  h-[35rem] w-[40rem] flex-col items-center blue-glassmorphism rounded-xl">
 				<div className=" h-full flex flex-col gap-2 overflow-y-auto py-8 px-3 w-full">
 					<div className=" h-full flex flex-col gap-2 overflow-y-auto py-8 px-3 w-full">
 						{messages.map((e) => {
